@@ -80,15 +80,3 @@ nodejs-chat-app/
 ├── README.md
 └── server.js
 ```
-
-## Future improvements
-
-- User authentication with JWT
-- MongoDB message persistence
-- Private conversations
-- Typing indicators
-- Read receipts
-- File/image sharing
-- Redis for Socket.IO scaling
-- Docker
-- Automated tests and GitHub Actions
