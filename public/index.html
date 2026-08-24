@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Node.js Chat</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <main class="chat-container">
+    <header class="chat-header">
+      <div>
+        <h1>Node.js Chat</h1>
+        <p><span id="user-count">0</span> users online</p>
+      </div>
+      <span class="status">● Live</span>
+    </header>
+
+    <section id="login-screen" class="login-screen">
+      <h2>Join the chat</h2>
+      <p>Enter your name to start chatting.</p>
+      <form id="login-form">
+        <input id="username" type="text" maxlength="30" placeholder="Your name" autocomplete="off" required />
+        <button type="submit">Join Chat</button>
+      </form>
+    </section>
+
+    <section id="chat-screen" class="chat-screen hidden">
+      <ul id="messages"></ul>
+      <form id="message-form" class="message-form">
+        <input id="message-input" type="text" maxlength="500" placeholder="Type a message..." autocomplete="off" required />
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>
