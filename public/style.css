@@ -1,0 +1,155 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background: #f1f5f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.chat-container {
+  width: min(700px, 100%);
+  height: min(750px, 90vh);
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-header {
+  background: #111827;
+  color: white;
+  padding: 20px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat-header h1 {
+  margin: 0 0 5px;
+  font-size: 22px;
+}
+
+.chat-header p {
+  margin: 0;
+  color: #cbd5e1;
+  font-size: 14px;
+}
+
+.status {
+  color: #86efac;
+  font-size: 14px;
+}
+
+.login-screen {
+  margin: auto;
+  width: min(400px, 90%);
+  text-align: center;
+}
+
+.login-screen h2 {
+  margin-bottom: 8px;
+}
+
+.login-screen p {
+  color: #64748b;
+  margin-bottom: 24px;
+}
+
+form {
+  display: flex;
+  gap: 10px;
+}
+
+input {
+  flex: 1;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 13px 14px;
+  font-size: 15px;
+  outline: none;
+}
+
+input:focus {
+  border-color: #64748b;
+}
+
+button {
+  border: 0;
+  border-radius: 8px;
+  padding: 13px 18px;
+  background: #2563eb;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+.chat-screen {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+#messages {
+  list-style: none;
+  padding: 20px;
+  margin: 0;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.message {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+  word-break: break-word;
+}
+
+.message-header {
+  color: #475569;
+  font-size: 12px;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.system-message {
+  text-align: center;
+  color: #94a3b8;
+  font-size: 13px;
+  margin: 12px 0;
+}
+
+.message-form {
+  padding: 14px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 500px) {
+  body {
+    padding: 0;
+  }
+
+  .chat-container {
+    height: 100vh;
+    border-radius: 0;
+  }
+}
